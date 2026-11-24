@@ -1,0 +1,546 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-08T18:22:46+00:00",
+  "title": "Design System: CRM",
+  "extensions": {
+    "colorMeta": {
+      "enamel-950": {
+        "role": "primary",
+        "displayName": "Midnight Enamel",
+        "canonical": "#0B1230",
+        "tonalRamp": [
+          "#0B1230",
+          "#121B40",
+          "#1C2752",
+          "#2A376A",
+          "#55607A",
+          "#9AA6C7",
+          "#C3CBE0",
+          "#E8EBF3"
+        ]
+      },
+      "enamel-800": {
+        "role": "primary",
+        "displayName": "Enamel Step",
+        "canonical": "#1C2752",
+        "tonalRamp": [
+          "#0B1230",
+          "#121B40",
+          "#1C2752",
+          "#2A376A",
+          "#55607A",
+          "#9AA6C7",
+          "#C3CBE0",
+          "#E8EBF3"
+        ]
+      },
+      "enamel-700": {
+        "role": "primary",
+        "displayName": "Enamel Step Light",
+        "canonical": "#2A376A",
+        "tonalRamp": [
+          "#0B1230",
+          "#121B40",
+          "#1C2752",
+          "#2A376A",
+          "#55607A",
+          "#9AA6C7",
+          "#C3CBE0",
+          "#E8EBF3"
+        ]
+      },
+      "enamel-300": {
+        "role": "primary",
+        "displayName": "Enamel Mist",
+        "canonical": "#9AA6C7",
+        "tonalRamp": [
+          "#0B1230",
+          "#121B40",
+          "#1C2752",
+          "#2A376A",
+          "#55607A",
+          "#9AA6C7",
+          "#C3CBE0",
+          "#E8EBF3"
+        ]
+      },
+      "enamel-200": {
+        "role": "primary",
+        "displayName": "Enamel Haze",
+        "canonical": "#C3CBE0",
+        "tonalRamp": [
+          "#0B1230",
+          "#121B40",
+          "#1C2752",
+          "#2A376A",
+          "#55607A",
+          "#9AA6C7",
+          "#C3CBE0",
+          "#E8EBF3"
+        ]
+      },
+      "porcelain": {
+        "role": "neutral",
+        "displayName": "Porcelain",
+        "canonical": "#F5F6F8",
+        "tonalRamp": [
+          "#1A1D24",
+          "#30343D",
+          "#4A4F5A",
+          "#686E7A",
+          "#8C929D",
+          "#B5BAC3",
+          "#D9DEE7",
+          "#F5F6F8"
+        ]
+      },
+      "panel-white": {
+        "role": "neutral",
+        "displayName": "Panel White",
+        "canonical": "#FFFFFF",
+        "tonalRamp": [
+          "#1A1A1A",
+          "#333333",
+          "#555555",
+          "#777777",
+          "#999999",
+          "#BBBBBB",
+          "#DDDDDD",
+          "#FFFFFF"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Cool Rule",
+        "canonical": "#D9DEE7",
+        "tonalRamp": [
+          "#1A1E27",
+          "#30364A",
+          "#4A5269",
+          "#677089",
+          "#8A93A9",
+          "#B2B9CA",
+          "#D9DEE7",
+          "#F1F3F7"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Station Ink",
+        "canonical": "#141B34",
+        "tonalRamp": [
+          "#141B34",
+          "#252E4D",
+          "#3A4466",
+          "#55607A",
+          "#747E96",
+          "#98A0B3",
+          "#C0C5D2",
+          "#E6E8EE"
+        ]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "#55607A",
+        "tonalRamp": [
+          "#141B34",
+          "#252E4D",
+          "#3A4466",
+          "#55607A",
+          "#747E96",
+          "#98A0B3",
+          "#C0C5D2",
+          "#E6E8EE"
+        ]
+      },
+      "scarlet": {
+        "role": "tertiary",
+        "displayName": "Alarm Scarlet",
+        "canonical": "#D21F2B",
+        "tonalRamp": [
+          "#4A0A0E",
+          "#7A1017",
+          "#A8141F",
+          "#D21F2B",
+          "#E5555D",
+          "#F09096",
+          "#F8C5C8",
+          "#FDECEC"
+        ]
+      },
+      "scarlet-dark": {
+        "role": "tertiary",
+        "displayName": "Alarm Scarlet Deep",
+        "canonical": "#A8141F",
+        "tonalRamp": [
+          "#4A0A0E",
+          "#7A1017",
+          "#A8141F",
+          "#D21F2B",
+          "#E5555D",
+          "#F09096",
+          "#F8C5C8",
+          "#FDECEC"
+        ]
+      },
+      "scarlet-soft": {
+        "role": "tertiary",
+        "displayName": "Alarm Wash",
+        "canonical": "#FDECEC",
+        "tonalRamp": [
+          "#4A0A0E",
+          "#7A1017",
+          "#A8141F",
+          "#D21F2B",
+          "#E5555D",
+          "#F09096",
+          "#F8C5C8",
+          "#FDECEC"
+        ]
+      },
+      "cobalt": {
+        "role": "secondary",
+        "displayName": "Signal Cobalt",
+        "canonical": "#1E5BFF",
+        "tonalRamp": [
+          "#0B1F5C",
+          "#11318F",
+          "#1747C8",
+          "#1E5BFF",
+          "#5584FF",
+          "#8DAEFF",
+          "#C3D4FF",
+          "#EAF0FF"
+        ]
+      },
+      "cobalt-dark": {
+        "role": "secondary",
+        "displayName": "Signal Cobalt Deep",
+        "canonical": "#1747C8",
+        "tonalRamp": [
+          "#0B1F5C",
+          "#11318F",
+          "#1747C8",
+          "#1E5BFF",
+          "#5584FF",
+          "#8DAEFF",
+          "#C3D4FF",
+          "#EAF0FF"
+        ]
+      },
+      "cobalt-soft": {
+        "role": "secondary",
+        "displayName": "Signal Wash",
+        "canonical": "#EAF0FF",
+        "tonalRamp": [
+          "#0B1F5C",
+          "#11318F",
+          "#1747C8",
+          "#1E5BFF",
+          "#5584FF",
+          "#8DAEFF",
+          "#C3D4FF",
+          "#EAF0FF"
+        ]
+      },
+      "line-amber": {
+        "role": "line",
+        "displayName": "Amber Line",
+        "canonical": "#F2B100",
+        "tonalRamp": [
+          "#3D2A00",
+          "#6B4900",
+          "#8A5A00",
+          "#C28E00",
+          "#F2B100",
+          "#F7CB4D",
+          "#FBE299",
+          "#FFF5D6"
+        ]
+      },
+      "line-green": {
+        "role": "line",
+        "displayName": "Green Line",
+        "canonical": "#1F9D55",
+        "tonalRamp": [
+          "#0A2E19",
+          "#104D2A",
+          "#14713C",
+          "#1F9D55",
+          "#4DB97B",
+          "#85D2A5",
+          "#BEE7CE",
+          "#E6F5EC"
+        ]
+      },
+      "line-plum": {
+        "role": "line",
+        "displayName": "Plum Line",
+        "canonical": "#7B3FA0",
+        "tonalRamp": [
+          "#231030",
+          "#3D1C54",
+          "#5A2B78",
+          "#7B3FA0",
+          "#9A68BA",
+          "#BA96D0",
+          "#DAC5E6",
+          "#F3ECF8"
+        ]
+      },
+      "line-teal": {
+        "role": "line",
+        "displayName": "Teal Line",
+        "canonical": "#0E8C8C",
+        "tonalRamp": [
+          "#042929",
+          "#074747",
+          "#0A6868",
+          "#0E8C8C",
+          "#3FAAAA",
+          "#7BC6C6",
+          "#B7E1E1",
+          "#E5F4F4"
+        ]
+      },
+      "line-orange": {
+        "role": "line",
+        "displayName": "Orange Line",
+        "canonical": "#E8590C",
+        "tonalRamp": [
+          "#431A04",
+          "#702C06",
+          "#A23F09",
+          "#E8590C",
+          "#EF8040",
+          "#F4A87A",
+          "#F9D0B6",
+          "#FDEEE5"
+        ]
+      },
+      "line-brown": {
+        "role": "line",
+        "displayName": "Brown Line",
+        "canonical": "#8D5A2B",
+        "tonalRamp": [
+          "#2A1A0C",
+          "#472C15",
+          "#6A4220",
+          "#8D5A2B",
+          "#AA7E54",
+          "#C5A382",
+          "#E0CBB6",
+          "#F5EDE5"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Page Title",
+        "purpose": "Uppercase signage page title, once per page."
+      },
+      "headline": {
+        "displayName": "Panel Title",
+        "purpose": "Panel headers and rail navigation, uppercase tracked."
+      },
+      "title": {
+        "displayName": "Record Name",
+        "purpose": "Linked record names in lists."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Sentences, notifications, status lines."
+      },
+      "body-sm": {
+        "displayName": "Body Small",
+        "purpose": "Metadata, table text, links, field errors."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Form labels, buttons, breadcrumbs; uppercase tracked signage."
+      },
+      "label-sm": {
+        "displayName": "Label Small",
+        "purpose": "Table heads, route station names, rail section heading."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Tabular figures for counts, totals, ids and dates."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "state-fast",
+        "value": "150ms",
+        "purpose": "Rail nav, row and choice-tile hover colour changes."
+      },
+      {
+        "name": "state",
+        "value": "200ms",
+        "purpose": "Button colour transitions."
+      },
+      {
+        "name": "route-fill",
+        "value": "width 200ms ease-out",
+        "purpose": "Project route fill advancing; disabled under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ],
+    "focus": {
+      "value": "outline: 2px solid #1E5BFF; outline-offset: 2px",
+      "purpose": "Global :focus-visible ring."
+    },
+    "lineInks": {
+      "order": [
+        "scarlet",
+        "cobalt",
+        "line-amber",
+        "line-green",
+        "line-plum",
+        "line-teal",
+        "line-orange",
+        "line-brown"
+      ],
+      "formula": "LINE_INKS[(teamId - 1) % 8]",
+      "noTeam": "enamel-300",
+      "source": "frontend/src/constants/teamLines.js"
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Filled midnight enamel; the one primary action in a form or decision.",
+      "html": "<button class=\"ds-btn\">Save client</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; background: #0B1230; color: #fff; border: none; border-radius: 4px; padding: 8px 16px; font-size: 0.875rem; line-height: 1.25rem; font-family: 'Barlow Semi Condensed', 'Noto Kufi Arabic', ui-sans-serif, system-ui, sans-serif; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; cursor: pointer; transition: background-color 200ms; } .ds-btn:hover { background: #2A376A; } .ds-btn:active { background: #1C2752; } .ds-btn:focus-visible { outline: 2px solid #1E5BFF; outline-offset: 2px; } .ds-btn:disabled { opacity: 0.5; cursor: not-allowed; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "White with an enamel border; Cancel, pagination, lesser actions.",
+      "html": "<button class=\"ds-btn-secondary\">Cancel</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; background: #fff; color: #0B1230; border: 1px solid #0B1230; border-radius: 4px; padding: 8px 16px; font-size: 0.875rem; line-height: 1.25rem; font-family: 'Barlow Semi Condensed', 'Noto Kufi Arabic', ui-sans-serif, system-ui, sans-serif; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; cursor: pointer; transition: background-color 200ms; } .ds-btn-secondary:hover { background: #F5F6F8; } .ds-btn-secondary:focus-visible { outline: 2px solid #1E5BFF; outline-offset: 2px; } .ds-btn-secondary:disabled { opacity: 0.5; cursor: not-allowed; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Signage label above a white ruled field with a cobalt focus.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-label\">Name</span><input class=\"ds-input\" placeholder=\"Client name\" /></label>",
+      "css": ".ds-field { display: block; font-family: Barlow, 'Noto Kufi Arabic', ui-sans-serif, system-ui, sans-serif; } .ds-label { display: block; color: #55607A; font-size: 0.875rem; line-height: 1.25rem; font-family: 'Barlow Semi Condensed', 'Noto Kufi Arabic', ui-sans-serif, system-ui, sans-serif; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; } .ds-input { display: block; width: 100%; margin-top: 4px; background: #fff; color: #141B34; border: 1px solid #D9DEE7; border-radius: 4px; padding: 8px 12px; font: inherit; font-size: 1rem; caret-color: #1E5BFF; } .ds-input::placeholder { color: #55607A; } .ds-input:focus { outline: none; border-color: #1E5BFF; box-shadow: 0 0 0 1px #1E5BFF; }"
+    },
+    {
+      "name": "Ruled Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "White panel on a 1px cool rule with a ruled header strip and hairline rows; no shadow.",
+      "html": "<section class=\"ds-panel\"><div class=\"ds-panel-head\"><h2>Waiting on you</h2><a href=\"#\">All notifications</a></div><ul><li>Website redesign<span>Acme Ltd</span></li><li>Quarterly audit<span>Northwind</span></li></ul></section>",
+      "css": ".ds-panel { background: #fff; border: 1px solid #D9DEE7; border-radius: 4px; color: #141B34; font-family: Barlow, 'Noto Kufi Arabic', ui-sans-serif, system-ui, sans-serif; } .ds-panel-head { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; border-bottom: 1px solid #D9DEE7; } .ds-panel-head h2 { margin: 0; font-size: 1rem; font-family: 'Barlow Semi Condensed', 'Noto Kufi Arabic', ui-sans-serif, system-ui, sans-serif; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; } .ds-panel-head a { color: #1747C8; font-size: 0.875rem; font-weight: 500; text-decoration: none; } .ds-panel-head a:hover { color: #0B1230; text-decoration: underline; text-underline-offset: 4px; } .ds-panel ul { list-style: none; margin: 0; padding: 0; } .ds-panel li { padding: 12px 24px; font-weight: 500; border-top: 1px solid rgba(217,222,231,0.6); } .ds-panel li:first-child { border-top: 0; } .ds-panel li span { display: block; color: #55607A; font-size: 0.875rem; font-weight: 400; }"
+    },
+    {
+      "name": "Enamel Rail Navigation",
+      "kind": "nav",
+      "refersTo": "side-rail",
+      "description": "Midnight rail nav; active item white with a 3px white underline; scarlet unread count.",
+      "html": "<nav class=\"ds-rail\"><a class=\"ds-nav is-current\" href=\"#\"><span>My work</span></a><a class=\"ds-nav\" href=\"#\"><span>Clients</span></a><a class=\"ds-nav\" href=\"#\"><span>Notifications</span><b class=\"ds-count\">3</b></a></nav>",
+      "css": ".ds-rail { background: #0B1230; width: 256px; padding: 12px; } .ds-nav { display: flex; align-items: center; gap: 12px; padding: 8px 12px; border-radius: 4px; color: #C3CBE0; text-decoration: none; font-size: 1rem; line-height: 1.5rem; font-family: 'Barlow Semi Condensed', 'Noto Kufi Arabic', ui-sans-serif, system-ui, sans-serif; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; transition: background-color 150ms, color 150ms; } .ds-nav span { border-bottom: 3px solid transparent; padding-bottom: 2px; transition: border-color 150ms; } .ds-nav:hover { background: #1C2752; color: #fff; } .ds-nav:focus-visible { outline: 2px solid #1E5BFF; outline-offset: 2px; } .ds-nav.is-current { color: #fff; } .ds-nav.is-current span { border-bottom-color: #fff; } .ds-count { margin-inline-start: auto; min-width: 24px; padding: 0 8px; border-radius: 9999px; background: #D21F2B; color: #fff; text-align: center; font-family: Barlow, 'Noto Kufi Arabic', ui-sans-serif, system-ui, sans-serif; font-size: 0.75rem; line-height: 1.25rem; font-weight: 400; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Team Line",
+      "kind": "chip",
+      "description": "A team's ink bar and name; ink = LINE_INKS[(id - 1) % 8].",
+      "html": "<span class=\"ds-team\"><i style=\"background:#D21F2B\"></i>Growth</span> <span class=\"ds-team\"><i style=\"background:#1E5BFF\"></i>Delivery</span> <span class=\"ds-team\"><i style=\"background:#F2B100\"></i>Accounts</span>",
+      "css": ".ds-team { display: inline-flex; align-items: center; gap: 8px; margin-inline-end: 16px; color: #141B34; font-family: Barlow, 'Noto Kufi Arabic', ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; white-space: nowrap; } .ds-team i { display: inline-block; width: 20px; height: 6px; border-radius: 9999px; }"
+    },
+    {
+      "name": "Project Route",
+      "kind": "custom",
+      "description": "Signature: project status as a four-station route in team ink; cancelled is a dashed suspended track.",
+      "html": "<div class=\"ds-route\"><div class=\"ds-track\"><span class=\"ds-fill\" style=\"width:66.67%\"></span><i class=\"past\"></i><i class=\"past\"></i><i class=\"now\"></i><i></i></div><span class=\"ds-route-label\">Working on it</span></div><div class=\"ds-route cancelled\"><div class=\"ds-track\"><i></i><i></i><i></i><i></i></div><span class=\"ds-route-label\">Cancelled</span></div>",
+      "css": ".ds-route { --ink: #1E5BFF; display: flex; align-items: center; gap: 12px; margin: 8px 0; font-family: Barlow, 'Noto Kufi Arabic', ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; color: #141B34; } .ds-track { position: relative; width: 96px; height: 12px; display: flex; align-items: center; justify-content: space-between; } .ds-track::before { content: ''; position: absolute; inset-inline: 0; top: 50%; height: 4px; transform: translateY(-50%); border-radius: 9999px; background: #D9DEE7; } .ds-fill { position: absolute; inset-inline-start: 0; top: 50%; height: 4px; transform: translateY(-50%); border-radius: 9999px; background: var(--ink); transition: width 200ms ease-out; } .ds-track i { position: relative; width: 8px; height: 8px; box-sizing: border-box; border-radius: 9999px; border: 1px solid #D9DEE7; background: #fff; } .ds-track i.past { border-color: var(--ink); background: var(--ink); } .ds-track i.now { width: 12px; height: 12px; border: 2px solid var(--ink); background: #fff; } .ds-route.cancelled .ds-track::before { height: 2px; border-radius: 0; background: repeating-linear-gradient(to right, #9AA6C7 0 6px, transparent 6px 10px); } .ds-route.cancelled .ds-track i { border-color: #9AA6C7; } .ds-route.cancelled .ds-route-label { color: #55607A; text-decoration: line-through; } @media (prefers-reduced-motion: reduce) { .ds-fill { transition: none; } }"
+    },
+    {
+      "name": "Error Banner",
+      "kind": "custom",
+      "refersTo": "error-banner",
+      "description": "Scarlet-soft alert strip for request failures.",
+      "html": "<p class=\"ds-error\" role=\"alert\">The given data was invalid.</p>",
+      "css": ".ds-error { margin: 0; padding: 8px 12px; border-radius: 4px; border: 1px solid rgba(210,31,43,0.3); background: #FDECEC; color: #A8141F; font-family: Barlow, 'Noto Kufi Arabic', ui-sans-serif, system-ui, sans-serif; font-size: 0.875rem; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Transit Line",
+    "overview": "The firm is drawn as a transit network. Every team owns one line colour, fixed by its id, and that ink follows the team's clients and projects onto every screen as a short bar beside the name. Every project is a short route of four stations (Requested, Approved, Working, Done) drawn in its team's ink, so status is read as a position on a line rather than as a coloured label. The shell is a midnight-enamel side rail, the kind of dark enamel a station sign is printed on; the work area is a cool porcelain ground with white panels on thin cool rules.\n\nThe voice is signage: condensed, uppercase, tracked labels for headings, navigation, buttons and table heads, against a plain humanist body face for names, sentences and figures. Density is operational, not airy: panels are dense lists divided by hairlines, figures line up in tabular columns, and colour is spent on lines and on the few things that need a person (unread notifications, errors, destructive actions). The system refuses the grey sidebar, white cards and rounded status pills of the stock admin template.\n\nThe world is built for English and Arabic from the start: layout is written in logical directions so it mirrors under right-to-left without a second stylesheet.",
+    "keyCharacteristics": [
+      "Midnight-enamel rail at the start edge, porcelain work ground, white panels on 1px cool rules.",
+      "A team's line ink, fixed by id, marks its clients and projects everywhere.",
+      "Project status is a route of stations in team ink, never a coloured pill.",
+      "Signage voice (condensed, uppercase, tracked) for labels; humanist body face with tabular figures for data.",
+      "Flat surfaces, 4px corners, no soft shadows.",
+      "Direction-aware by construction (logical properties, mirrored spacing)."
+    ],
+    "rules": [
+      {
+        "name": "The Fixed Line Rule",
+        "body": "A team's ink is derived from its id through the shared line list, never picked per screen. Wherever a team, its client or its project appears, the same ink marks it.",
+        "section": "colors"
+      },
+      {
+        "name": "The No Status Ink Rule",
+        "body": "Project status never takes a line ink of its own. Status is expressed in the project's team ink (filled route, or team ink mixed 55% with white for \"working\" in aggregate bars), in enamel neutrals (rule for not started) or as a suspended dashed enamel-300 track (cancelled).",
+        "section": "colors"
+      },
+      {
+        "name": "The Alarm Rule",
+        "body": "As a UI state rather than a team line, scarlet means only: unread, error, or destructive. Never use it for emphasis, decoration or success.",
+        "section": "colors"
+      },
+      {
+        "name": "The Signage Voice Rule",
+        "body": "The condensed face is used only uppercase and tracked, and only for things that name or direct (titles, labels, buttons, table heads, navigation). Anything read as prose stays in Barlow, sentence case.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Figures Rule",
+        "body": "Counts, totals, ids and dates use tabular numerals so columns line up.",
+        "section": "typography"
+      },
+      {
+        "name": "The Ruled Panel Rule",
+        "body": "A panel is separated from the ground by a 1px rule and a white fill, not by a shadow. If a surface needs more separation, use tone (rail enamel, porcelain), not elevation.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do derive every team colour from `LINE_INKS[(id - 1) % 8]` and show it as a short rounded bar, a route, or an ink border.",
+      "Do show project status as a Project Route in the team's ink; for aggregates use team ink, team ink mixed with white, rule, and the dashed suspended track.",
+      "Do use filled midnight enamel for the one primary action, the bordered secondary for everything else, and links for row actions.",
+      "Do set titles, labels, buttons, nav and table heads in the uppercase tracked signage face, and everything read as prose in Barlow.",
+      "Do use tabular figures for every count, total, id and date.",
+      "Do write spacing and alignment in logical directions (start/end), reverse spaced groups under right-to-left, and force phone numbers left-to-right.",
+      "Do draw icons as authored inline SVG strokes.",
+      "Do keep motion to 150 to 200ms colour and width transitions on state change, and drop them under reduced motion."
+    ],
+    "donts": [
+      "Don't render project status as rounded coloured pills or give a status its own line ink.",
+      "Don't use scarlet as a UI colour for anything but unread, error and destructive.",
+      "Don't add soft card shadows; separate surfaces with the 1px rule and tone.",
+      "Don't use physical left/right spacing or alignment.",
+      "Don't add an icon library or glyph characters as icons.",
+      "Don't add entrance, scroll or decorative motion."
+    ]
+  }
+}

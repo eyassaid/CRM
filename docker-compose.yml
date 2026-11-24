@@ -1,0 +1,138 @@
+name: crm
+
+services:
+  # ---------- Backend (Laravel API) ----------
+  app:
+    container_name: app
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: php-fpm
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - ./backend:/var/www
+    networks:
+      - crm
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # Sends queued jobs (e.g. notification emails). It keeps the code in memory:
+  # run `docker compose restart queue` after changing backend code.
+  queue:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: php-fpm
+    restart: unless-stopped
+    working_dir: /var/www
+    command: ["php", "artisan", "queue:work", "--tries=3"]
+    volumes:
+      - ./backend:/var/www
+    networks:
+      - crm
+    depends_on:
+      db:
+        condition: service_healthy
+
+  nginx:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: nginx
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-8000}:80"
+    volumes:
+      - ./backend:/var/www:ro
+    networks:
+      - crm
+    depends_on:
+      - app
+
+  db:
+    image: mysql:8.4
+    restart: unless-stopped
+    ports:
+      - "${FORWARD_DB_PORT:-3306}:3306"
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE:-laravel}
+      MYSQL_USER: ${DB_USERNAME:-laravel}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-secret}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-rootsecret}
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - crm
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-p${DB_ROOT_PASSWORD:-rootsecret}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "${PMA_PORT:-8080}:80"
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-rootsecret}
+    networks:
+      - crm
+    depends_on:
+      - db
+
+  # One-time backend setup: docker compose --profile setup run --rm setup
+  setup:
+    profiles: ["setup"]
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: composer
+    working_dir: /var/www
+    entrypoint: ["/bin/sh", "/usr/local/bin/setup-backend"]
+    environment:
+      DB_DATABASE: ${DB_DATABASE:-laravel}
+      DB_USERNAME: ${DB_USERNAME:-laravel}
+      DB_PASSWORD: ${DB_PASSWORD:-secret}
+    volumes:
+      - ./backend:/var/www
+      - ./docker/scripts/setup-backend:/usr/local/bin/setup-backend:ro
+    networks:
+      - crm
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # ---------- Frontend (Vue SPA) ----------
+  frontend:
+    image: node:22-alpine
+    restart: unless-stopped
+    working_dir: /app
+    command: ["/bin/sh", "/usr/local/bin/frontend-dev"]
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+      # Docker networks here have no IPv6 route; without this npm sometimes hangs on IPv6 addresses.
+      NODE_OPTIONS: --dns-result-order=ipv4first
+      # Vite forwards /api requests to the backend over the Compose network.
+      API_PROXY_TARGET: http://nginx
+    ports:
+      - "${VITE_PORT:-5173}:5173"
+    volumes:
+      - ./frontend:/app
+      - frontend-node-modules:/app/node_modules
+      - ./docker/scripts/frontend-dev:/usr/local/bin/frontend-dev:ro
+    networks:
+      - crm
+    depends_on:
+      - nginx
+
+networks:
+  crm:
+    driver: bridge
+
+volumes:
+  mysql-data:
+  frontend-node-modules:

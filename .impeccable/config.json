@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/*.html"
+        ],
+        "createdAt": "2026-11-08T18:23:30.577Z",
+        "reason": "Claude: decision-round sketches of rejected/alternate directions, each intentionally in its own direction's font; not shipped UI"
+      }
+    ]
+  }
+}

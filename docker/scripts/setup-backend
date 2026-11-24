@@ -1,0 +1,39 @@
+#!/bin/sh
+# One-time backend setup: dependencies, .env, app key, Passport, database.
+set -eu
+
+composer install --no-interaction --prefer-dist
+
+if [ ! -f .env ]; then
+  echo "Creating .env from .env.example..."
+  cp .env.example .env
+fi
+
+# Point Laravel at the Compose services.
+sed -i 's|^APP_URL=.*|APP_URL=http://localhost:8000|' .env
+sed -i 's/^#\{0,1\}[[:space:]]*DB_CONNECTION=.*/DB_CONNECTION=mysql/' .env
+sed -i 's/^#\{0,1\}[[:space:]]*DB_HOST=.*/DB_HOST=db/' .env
+sed -i 's/^#\{0,1\}[[:space:]]*DB_PORT=.*/DB_PORT=3306/' .env
+sed -i "s|^#\{0,1\}[[:space:]]*DB_DATABASE=.*|DB_DATABASE=${DB_DATABASE}|" .env
+sed -i "s|^#\{0,1\}[[:space:]]*DB_USERNAME=.*|DB_USERNAME=${DB_USERNAME}|" .env
+sed -i "s|^#\{0,1\}[[:space:]]*DB_PASSWORD=.*|DB_PASSWORD=${DB_PASSWORD}|" .env
+
+if ! grep -q '^APP_KEY=base64:' .env; then
+  php artisan key:generate --force
+fi
+
+# Passport signing keys: reuse keys from .env or storage/, otherwise generate them.
+if ! grep -q '^PASSPORT_PRIVATE_KEY=.' .env && [ ! -f storage/oauth-private.key ]; then
+  php artisan passport:keys --force
+fi
+
+php artisan migrate --force
+php artisan storage:link --force
+
+# Passport needs a personal access client before createToken() can issue tokens.
+if [ ! -f storage/.passport-client-created ]; then
+  php artisan passport:client --personal --name="Personal Access Client" --provider=users --no-interaction
+  touch storage/.passport-client-created
+fi
+
+echo "Backend is ready."
